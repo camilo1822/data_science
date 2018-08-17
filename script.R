@@ -81,3 +81,45 @@ plot(murders_in_millions,total_guns_murders)
 hist(murders$total)
 #boxPlots, comparamos el numero de abitantes por region y indicamos que los datos salen de la tabla murders
 boxplot(population ~ region, data = murders)
+#---------------------------------------------
+#---------------------------------------------
+#Condicional
+a <- 2
+if(a != 0){
+  print(1/a)
+}else{
+  print("es ceroooo")
+}
+#Promedio de muertes
+murder_rate <- murders$total/murders$population*100000
+ind <- which.min(murder_rate)
+if(murder_rate[ind] < 0.5){
+  print(murders$state[ind])
+}else{
+  print("todos son mayores")
+}
+#otra forma de condicional
+ifelse(a < 1, 1/a, NA)
+e <- c(0,1,2,-4,5)
+result <- ifelse(e > 0, 1/e, NA)
+#Funcion any
+anyVar <- c(TRUE, FALSE, FALSE)
+any(anyVar)
+anyVar <- c(FALSE, FALSE, FALSE)
+any(anyVar)
+#Funcion all
+allVar <- c(TRUE, FALSE, FALSE)
+all(allVar)
+allVar <- c(TRUE, TRUE, TRUE)
+all(allVar)
+#---------------------------------------------
+#---------------------------------------------
+#Funciones
+avg <- function(x){
+  s <- sum(x)
+  n <- length(x)
+  s/n
+}
+
+x <- 1:100
+avg(x)
