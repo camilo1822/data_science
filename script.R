@@ -90,6 +90,12 @@ if(a != 0){
 }else{
   print("es ceroooo")
 }
+x <- c(1,2,-3,4)
+if(all(x>0)){
+  print("All Positives")
+} else{
+  print("Not All Positives")
+}
 #Promedio de muertes
 murder_rate <- murders$total/murders$population*100000
 ind <- which.min(murder_rate)
@@ -123,3 +129,9 @@ avg <- function(x){
 
 x <- 1:100
 avg(x)
+#---------------------------------------------
+#---------------------------------------------
+#Loops
+for(i in 1:5){
+  print(i)
+}
